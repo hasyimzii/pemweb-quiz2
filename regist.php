@@ -3,7 +3,7 @@
     include '_main.php';
 ?>
 <?=template_header('Register')?>
-<div class="container" style="padding: 100px 370px;">
+<div class="container" style="padding: 20px 370px;">
         <div class="row mt-5 p-5 shadow p-3 mb-5 bg-white rounded">
             <h2 class="ml-2 mb-3">Register</h2>
             <form action="RegistController.php" method="post" class="col-12">
@@ -34,7 +34,8 @@
                     unset($_SESSION['message']);
                 ?>
                 </small>
-                <button type="submit" name="regist" class="btn btn-primary shadow btn-block">Register</button>
+                <button type="submit" name="regist" class="btn btn-primary shadow btn-block mb-2">Register</button>
+                <small>Already have an account? <a href="login.php">Login</a></small>
             </form>
         </div>
     </div>

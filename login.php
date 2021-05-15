@@ -28,7 +28,7 @@
                 ?>
                 </small>
                 <button type="submit" name="login" class="btn btn-primary shadow btn-block mb-2">Login</button>
-                <a href="regist.php" class="btn btn-dark shadow btn-block">Register</a>
+                <small>Don't have account? <a href="regist.php">Register</a></small>
             </form>
         </div>
     </div>

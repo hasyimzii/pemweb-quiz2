@@ -7,12 +7,12 @@
 		$fullname = $_POST['fullname'];
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		$confpass = $_POST['password'];
+		$confpass = $_POST['confpass'];
  
         
         if(!empty($username) && !empty($password) && !empty($confpass) && !empty($fullname)) {
             // confirm password
-            if($password == $confpass) {
+            if($password === $confpass) {
                 // check username availability
                 $check = mysqli_query($conn, "SELECT * FROM users WHERE username='$username'");
 
@@ -29,7 +29,7 @@
             }
             // confirm password wrong
             else {
-                $_SESSION['message'] = "*Registration Failed. Please write the Confirm Password correctly!";
+                $_SESSION['message'] = "*Please write the Confirm Password correctly!";
                 header('location:regist.php');
             }
         }
